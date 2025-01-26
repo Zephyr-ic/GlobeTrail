@@ -1,0 +1,117 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  color: white;
+  padding: 10px 20px;
+}
+
+.header .logo .logo_img {
+  height: 65px;
+  margin-left: 110px;
+  margin-right: 20px;
+}
+
+.header-controls {
+  display: flex;
+  justify-content: flex-end; /* Align content to the right */
+  align-items: center;
+  flex-grow: 1; /* Ensures the space between left and right fills even if auth-buttons are hidden */
+  margin-right: 60px;
+}
+
+.language-container {
+  display: flex;
+  margin-right: 20px; /* Space between language buttons and auth buttons */
+}
+
+.language-switch {
+  background: none;
+  line-height: 30px;
+  color: rgb(255, 255, 255);
+  margin: 0 5px;
+  padding-right: 10px;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.toggle-image {
+  cursor: pointer;
+  width: 70px; /* Fixed width for image */
+  height: 70px; /* Fixed height for image */
+}
+/* Ensure language buttons don't move when auth buttons are hidden */
+.auth-buttons {
+  display:flex;
+  visibility: visible;  /* Hides the auth buttons without affecting layout */
+  justify-content: flex-end;
+  align-items: center;
+  margin-right:80px;
+}
+
+.auth-buttons.custom-style {
+  display: flex;
+  visibility: hidden; /* Show auth buttons if class is added */
+  justify-content: flex-end;
+  align-items: center;
+}
+.toggle-image.hidden {
+  visibility: hidden; /* Make the image invisible */
+}
+.overlay {
+  display: flex;
+  visibility: visible;
+  height: 100px ;
+}
+.overlay.custom-style {
+  display: flex;
+  visibility: hidden;
+  height: 100px ;
+}
+.overlay img {
+  max-width: 100%;
+  height: auto;
+}
+.overlay-container {
+  display: flex;
+  align-items: center;
+  margin-right:100px;
+  width: 40px; /* Fixed width matches the image dimensions */
+  height: 40px; /* Fixed height matches the image dimensions */
+}
+.auth-buttons .signup-btn {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  margin: 0 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  background: #FFB169;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  display: inline-block;
+  text-align: center;
+  height: 38px;
+  line-height: 29px;
+  box-sizing: border-box;
+  width: 131px;
+}
+
+.auth-buttons .login {
+  background: none;
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 20px;
+  margin-left: 25px;
+
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

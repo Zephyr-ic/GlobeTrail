@@ -1,0 +1,42 @@
+.wrapper {
+    display: flex;
+    height: 100vh; /* Full height */
+}
+
+.image-container {
+    display: flex;
+    flex: 1; /* Allow the container to take full width */
+    align-items: stretch; /* Ensure children stretch to fill the height */
+    position: relative; /* Position relative for the overlay */
+}
+
+.left-image,
+.right-image {
+    width: 35%; /* Adjust width as needed */
+    object-fit: cover; /* Ensure the image covers its area */
+}
+
+.verify-waiting-container {
+    flex: 1; /* Center space takes remaining width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    background-color: white;
+    width: 800px;
+}
+
+.image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3); /* Black tint with 30% opacity */
+    z-index: 1; /* Ensure the overlay is above the images */
+}
+
+.verify-waiting-container {
+    z-index: 2; /* Ensure the text is above the overlay */
+}

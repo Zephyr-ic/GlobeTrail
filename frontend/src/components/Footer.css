@@ -1,0 +1,77 @@
+/* Footer styles */
+.footer {
+    position: fixed;
+    bottom: -355px;  /* Initially hidden offscreen */
+    left: 0;
+    width: 100%;
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    transition: bottom 0.3s;
+    z-index: 1000; /* Ensure it's on top of other components */
+  }
+  
+  /* Show the footer when mouse enters near the bottom of the page */
+  .footer.show {
+    bottom: 0;
+  }
+  
+  /* Trigger zone (Invisible area at the bottom) */
+  .footer-trigger {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 50px;  /* Area to detect mouse hover */
+    width: 100%;
+    z-index: 999; /* Trigger area z-index lower than footer */
+    cursor: pointer; /* Make it clickable */
+  }
+  
+  /* Add an arrow pointing up inside the trigger area */
+  .footer-trigger::before {
+    content: '⮝';  /* Unicode up arrow */
+    font-size: 25px;  /* Adjust the size */
+    color: white;    /* Arrow color */
+    display: block;
+    text-align: center;  /* Center it horizontally */
+    line-height: 50px;   /* Vertically center the arrow in the trigger area */
+    opacity: 0.7;  /* Slight transparency */
+    transition: opacity 0.3s ease;
+  }
+  .footer-trigger.custom-style::before {
+    content: '⮝';  /* Unicode up arrow */
+    font-size: 25px;  /* Adjust the size */
+    color: rgb(0, 0, 0);    /* Arrow color */
+    display: block;
+    text-align: center;  /* Center it horizontally */
+    line-height: 50px;   /* Vertically center the arrow in the trigger area */
+    opacity: 1;  /* Slight transparency */
+    transition: opacity 0.3s ease;
+  }
+  /* On hover, increase opacity of the arrow for better visibility */
+  .footer-trigger:hover::before {
+    opacity: 1;
+  }
+  
+  .footer-info-container{
+    display: flex;
+    justify-content: center;
+
+  }
+  .footer-info { 
+    text-align: left;
+    margin-right: 100px ;
+  
+  }
+  .footer-logo{ 
+    height: 200px;
+  }
+  .footer .p{
+    font-size: 30px;
+  }
+  a{
+    text-decoration: underline;
+    cursor: pointer;
+    color:#FFB169
+  }
